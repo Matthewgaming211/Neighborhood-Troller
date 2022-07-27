@@ -33,3 +33,21 @@ end)
 local Tab2 = Window:NewTab("Credits")
 local Section = Tab2:NewSection("Kavo UI Library by xHeptc, Scripts by ADutchGuy")
 local Section = Tab2:NewSection("Public Alpha 0.1")
+local args = {
+    [1] = {
+        ["Event"] = "GetToolPickerItem",
+        ["ToolName"] = "Clipboard"
+    }
+}
+
+game:GetService("Players").LocalPlayer.Remotes.MainInvoke:InvokeServer(unpack(args))
+Section:NewKeybind("KeybindText", "KeybindInfo", Enum.KeyCode.One, function()
+    local args = {
+        [1] = {
+        ["Event"] = "GetToolPickerItem",
+        ["ToolName"] = "Clipboard"
+        }
+    }
+
+    game:GetService("Players").LocalPlayer.Remotes.MainInvoke:InvokeServer(unpack(args))
+end)
